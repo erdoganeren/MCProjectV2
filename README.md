@@ -1,6 +1,8 @@
-# mbed-os-example-wifi #
+#MCProjectV2
+author: Eren Erdogan
 
-Wi-Fi example for Mbed OS
+
+sources Prject: Socket / Wi-Fi example for Mbed OS
 
 (Note: To see this example in a rendered form you can import into the Arm Mbed Online Compiler, please see [the documentation](https://os.mbed.com/docs/mbed-os/latest/apis/wi-fi.html#wi-fi-example).)
 
@@ -50,42 +52,6 @@ Then pin names need to be configured as instructed in the drivers README file.
    cd mbed-os-example-wifi
    ```
 
-1. Configure the Wi-Fi shield and settings.
-   Edit ```mbed_app.json``` to include the correct Wi-Fi shield, SSID and password:
-
-```json
-{
-    "config": {
-        "wifi-ssid": {
-            "help": "WiFi SSID",
-            "value": "\"SSID\""
-        },
-        "wifi-password": {
-            "help": "WiFi Password",
-            "value": "\"PASSWORD\""
-        }
-    },
-    "target_overrides": {
-        "*": {
-            "platform.stdio-convert-newlines": true,
-            "esp8266.provide-default" : false
-        }
-    }
-}
-```
-
-   For build-in WiFi, you do not need to set any `provide-default` values. Those are required
-   if you use external WiFi shield.
-
-   Sample ```mbed_app.json``` files are provided for ESP8266 (```mbed_app_esp8266.json```), X-NUCLEO-IDW04A1 (```mbed_app_idw04a1.json```) and X-NUCLEO-IDW01M1 (```mbed_app_idw01m1```).
-
-
-1. Compile and generate binary.
-    For example, for `GCC`:
-    ```
-    mbed compile -t GCC_ARM -m UBLOX_EVK_ODIN_W2
-    ```
-
 1. Open a serial console session with the target platform using the following parameters:
     * **Baud rate:** 9600
     * **Data bits:** 8
@@ -113,7 +79,6 @@ Then pin names need to be configured as instructed in the drivers README file.
 
     Done
     ```
-
 ## Troubleshooting
 
 If you have problems, you can review the [documentation](https://os.mbed.com/docs/latest/tutorials/debugging.html) for suggestions on what could be wrong and how to fix it.
